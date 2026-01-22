@@ -130,7 +130,11 @@ See the `example` for the exact prompt set we used to produce some of our videos
 ## Training
 **Download checkpoints**
 
-Please follow [Self-Forcing](https://github.com/guandeh17/Self-Forcing) to download text prompts and ODE initialized checkpoint.
+Download text prompts and ODE initialized checkpoint.
+```
+huggingface-cli download gdhe17/Self-Forcing checkpoints/ode_init.pt --local-dir .
+huggingface-cli download gdhe17/Self-Forcing vidprom_filtered_extended.txt --local-dir prompts
+```
 
 Download Wan2.1-T2V-14B as the teacher model.
 
