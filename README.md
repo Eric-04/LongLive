@@ -92,7 +92,7 @@ Other hardware setup could also work but hasn't been tested.
 
 Create a conda environment and install dependencies:
 ```
-git clone https://github.com/NVlabs/LongLive
+git clone https://github.com/Eric-04/LongLive
 cd LongLive
 conda create -n longlive python=3.10 -y
 conda activate longlive
