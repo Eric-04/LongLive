@@ -111,6 +111,29 @@ pip install flash-attn --no-build-isolation
 huggingface-cli download Wan-AI/Wan2.1-T2V-1.3B --local-dir wan_models/Wan2.1-T2V-1.3B
 huggingface-cli download Efficient-Large-Model/LongLive --local-dir longlive_models
 ```
+If huggingface-cli doesn't work
+```
+python - <<'EOF'
+from huggingface_hub import snapshot_download
+
+snapshot_download(
+    repo_id="Wan-AI/Wan2.1-T2V-1.3B",
+    local_dir="wan_models/Wan2.1-T2V-1.3B",
+    local_dir_use_symlinks=False
+)
+EOF
+```
+```
+python - <<'EOF'
+from huggingface_hub import snapshot_download
+
+snapshot_download(
+    repo_id="Efficient-Large-Model/LongLive",
+    local_dir="longlive_models",
+    local_dir_use_symlinks=False
+)
+EOF
+```
 
 **Single Prompt Video Generation**
 ```
